@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>THE SUMMARY STATISTICS CLUB</title>
+      <link rel="stylesheet" href="ss.css">
+      <meta charset="utf-8">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+      <meta content="width=device-width, height=device-height, initial-scale=1" name="viewport">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/languages/python-repl.min.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Please do not try to average percentiles</h1>
+      <div class="share">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet"
+           data-via="mcfunley"
+           data-size="large">
+          Tweet
+        </a>
+
+        <a class="twitter-follow-button" href="https://twitter.com/mcfunley"
+           data-show-count="false"
+           data-size="large">
+            Follow @mcfunley
+        </a>
+      </div>
+    </header>
+
+    <main>
+        <pre>
+            <code class="language-python-repl">
+>>> import numpy as np
+>>> data = np.random.normal(100, 50, size=100)
+>>> np.percentile(data, 95)
+175.9854245955235
+
+>>> sum(np.percentile(d, 95) for d in data.reshape((10, 10))) / 10
+168.50342774852376
+            </code>
+        </pre>
+        <script>hljs.highlightAll();</script>
+    </main>
+
+    <footer>
+      <div class="share">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet"
+           data-via="mcfunley"
+           data-size="large">
+          Tweet
+        </a>
+
+        <a class="twitter-follow-button" href="https://twitter.com/mcfunley"
+           data-show-count="false"
+           data-size="large">
+          Follow @mcfunley
+        </a>
+      </div>
+
+      <p class="elsewhere">
+          <a href="https://mcfunley.com">Check out my other clubs</a>
+      </p>
+    </footer>
+
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139602329-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-139602329-1');
+    </script>
+
+  </body>
+</html>
