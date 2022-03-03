@@ -37,7 +37,7 @@
 >>> np.percentile(data, 95)
 175.9854245955235
 
->>> sum(np.percentile(d, 95) for d in data.reshape((10, 10))) / 10
+>>> np.mean(np.percentile(d, 95) for d in data.reshape((10, 10)))
 168.50342774852376
             </code>
         </pre>
